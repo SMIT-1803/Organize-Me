@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="header">
+        <h1>Organize Me</h1>
+    </header>
+
+    <div class="container">
+        <form>
+            <input type="text" name="event_title" placeholder="Enter API Key" id="apiKey" required>
+             <button class="loginBtn">Login</button>
+        </form>
+    </div>
+    
+    <div class="boxA"> 
+        <ul>
+            <li>Scroll down to the “Approved Integrations” or look for a button labeled “+ New Access Token” (depends on your institution’s Canvas setup)</li>
+            <li>Click “+ New Access Token”</li>
+            <li>Give it a Purpose name (e.g., "My App" or "Personal Script")</li>
+            <li>(Optional) Set an expiration date if you want it to expire automatically</li>
+            <li>Click “Generate Token”</li>
+            <li>Copy the token (API key) that appears — you won't be able to see it again after you leave the page, so save it securely.</li>
+        </ul>
+        
+        <div class="Canva">
+            <a href="https://canvas.sfu.ca/profile/settings" target="_blank">Canvas</a>
+        </div>
+    </div>
+    <script src="JS/frontPage.js"></script>
+</body>
+</html>
