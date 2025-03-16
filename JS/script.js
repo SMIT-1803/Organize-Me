@@ -71,11 +71,8 @@ fetch(`https://${canvasUrlInput}/api/v1/courses?access_token=${apiKey}`)
         return response.json();
     })
     .then(fetchedCourses => {
-        // Filter courses to only include those with valid names
         courses = fetchedCourses.filter(course => course.name && course.name.trim() !== "");
-        checkBoxContainer.innerHTML = ''; // Clear existing checkboxes
-
-        // Add "All Subjects" checkbox
+        checkBoxContainer.innerHTML = '';
         const allDiv = document.createElement('div');
         allDiv.className = "checkbox-item";
         const allCheckbox = document.createElement('input');
@@ -91,7 +88,7 @@ fetch(`https://${canvasUrlInput}/api/v1/courses?access_token=${apiKey}`)
         allDiv.appendChild(allLabel);
         checkBoxContainer.appendChild(allDiv);
 
-        // Add course checkboxes for valid courses
+       
         courses.forEach(course => {
             const div = document.createElement('div');
             div.className = "checkbox-item";
@@ -108,15 +105,15 @@ fetch(`https://${canvasUrlInput}/api/v1/courses?access_token=${apiKey}`)
             checkBoxContainer.appendChild(div);
         });
 
-        // Update assignments initially
+       
         updateAssignments();
 
-        // Add event listeners to checkboxes
+       
         const allCheckboxes = document.querySelectorAll('input[name="course"]');
         allCheckboxes.forEach(checkbox => {
             checkbox.addEventListener('change', function() {
                 if (this.value === "all" && this.checked) {
-                    // If "All Subjects" is checked, uncheck all others
+                    
                     allCheckboxes.forEach(cb => {
                         if (cb.value !== "all") cb.checked = false;
                     });
@@ -138,7 +135,7 @@ fetch(`https://${canvasUrlInput}/api/v1/courses?access_token=${apiKey}`)
     });
 
 function updateAssignments() {
-    tasksContainer.innerHTML = ''; // Clear existing task boxes
+    tasksContainer.innerHTML = ''; 
     const checkedBoxes = document.querySelectorAll('input[name="course"]:checked');
     const selectedValues = Array.from(checkedBoxes).map(cb => cb.value);
     if (selectedValues.includes("all") || selectedValues.length === 0) {

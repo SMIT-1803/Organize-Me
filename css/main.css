@@ -19,7 +19,7 @@ body {
     position: relative;
 }
 
-/* Overlay to ensure text readability */
+
 body::before {
     content: '';
     position: fixed;
@@ -31,7 +31,7 @@ body::before {
     z-index: -1;
 }
 
-/* Navbar styling */
+
 .navbar {
     width: 100%;
     background-color: rgba(30, 41, 59, 0.9);
@@ -59,7 +59,7 @@ body::before {
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-/* Task Area */
+
 .taskArea {
     margin-top: 90px;
     padding: 0 30px;
@@ -68,7 +68,6 @@ body::before {
     margin-right: auto;
 }
 
-/* Checkbox container */
 #checkBoxContainer {
     background: rgba(30, 41, 59, 0.8);
     backdrop-filter: blur(10px);
@@ -135,7 +134,7 @@ label:hover {
     color: #4F46E5;
 }
 
-/* Tasks Container */
+
 #tasksContainer {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
@@ -195,7 +194,7 @@ label:hover {
     opacity: 0.7;
 }
 
-/* Error and status styles */
+
 .error {
     background-color: rgba(239, 68, 68, 0.2);
     color: #FCA5A5;
@@ -219,7 +218,7 @@ label:hover {
     border-left: 4px solid #F59E0B;
 }
 
-/* Media queries for responsiveness */
+
 @media (max-width: 768px) {
     .navbar {
         padding: 15px 20px;
